@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_819a3024b5ab0868e5cabbefb63bef86 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_819a3024b5ab0868e5cabbefb63bef86" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_819a3024b5ab0868e5cabbefb63bef86 = L.map(
+                "map_819a3024b5ab0868e5cabbefb63bef86",
+                {
+                    center: [51.7592, 19.456],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e70a31ec34d2f359d7c0c3b4219b3d47 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var poly_line_979591be83cecf402a8a7b28efa03886 = L.polyline(
+                [[51.768, 19.531], [51.759, 19.52], [51.7596, 19.4784], [51.7592, 19.4578], [51.7599, 19.4663], [51.7767, 19.446], [51.7596, 19.4266], [51.7465, 19.3927]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            poly_line_979591be83cecf402a8a7b28efa03886.bindTooltip(
+                `<div>
+                     Linia Wschód-Zachód
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7dce7e5233b83e2d3585893a2961c66c = L.polyline(
+                [[51.8143, 19.4581], [51.7981, 19.406], [51.7898, 19.4592], [51.7767, 19.446], [51.7592, 19.4578], [51.746, 19.457], [51.7123, 19.4242]],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 1.0, "stroke": true, "weight": 5}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            poly_line_7dce7e5233b83e2d3585893a2961c66c.bindTooltip(
+                `<div>
+                     Linia Północ-Południe
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_960b367b7581390a5a0901277e9c29e9 = L.marker(
+                [51.768, 19.531],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_6018bd4c51d8e6bcb6f2cd97bfef8a02 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_960b367b7581390a5a0901277e9c29e9.setIcon(icon_6018bd4c51d8e6bcb6f2cd97bfef8a02);
+        
+    
+        var popup_f4c85bb0c9d7c1c6d921f31782833f69 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e59c806b43c6d698defaeb26f4bd34b2 = $(`<div id="html_e59c806b43c6d698defaeb26f4bd34b2" style="width: 100.0%; height: 100.0%;">Przystanek metra: Łódź Widzew</div>`)[0];
+            popup_f4c85bb0c9d7c1c6d921f31782833f69.setContent(html_e59c806b43c6d698defaeb26f4bd34b2);
+        
+
+        marker_960b367b7581390a5a0901277e9c29e9.bindPopup(popup_f4c85bb0c9d7c1c6d921f31782833f69)
+        ;
+
+        
+    
+    
+            var marker_989fa796e00a6f3480762fc468ea8ce6 = L.marker(
+                [51.759, 19.52],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_ad45419dbfe9e58c232db860a7c61364 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_989fa796e00a6f3480762fc468ea8ce6.setIcon(icon_ad45419dbfe9e58c232db860a7c61364);
+        
+    
+        var popup_10ef74ac01a6b12b52d2fb2091ec99c1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_67aa399ec8f08c81a0b4b701d0a1c872 = $(`<div id="html_67aa399ec8f08c81a0b4b701d0a1c872" style="width: 100.0%; height: 100.0%;">Przystanek metra: Janów</div>`)[0];
+            popup_10ef74ac01a6b12b52d2fb2091ec99c1.setContent(html_67aa399ec8f08c81a0b4b701d0a1c872);
+        
+
+        marker_989fa796e00a6f3480762fc468ea8ce6.bindPopup(popup_10ef74ac01a6b12b52d2fb2091ec99c1)
+        ;
+
+        
+    
+    
+            var marker_b9746ee955c74c694fdbd69bd436c21e = L.marker(
+                [51.7596, 19.4784],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_929bf8ebcfd717b1af5d836f4e2a2663 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b9746ee955c74c694fdbd69bd436c21e.setIcon(icon_929bf8ebcfd717b1af5d836f4e2a2663);
+        
+    
+        var popup_a05e8de4022798933e8014f012549516 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_25261c4328f940068195f1dc1f0c6bc7 = $(`<div id="html_25261c4328f940068195f1dc1f0c6bc7" style="width: 100.0%; height: 100.0%;">Przystanek metra: al. Piłsudskiego</div>`)[0];
+            popup_a05e8de4022798933e8014f012549516.setContent(html_25261c4328f940068195f1dc1f0c6bc7);
+        
+
+        marker_b9746ee955c74c694fdbd69bd436c21e.bindPopup(popup_a05e8de4022798933e8014f012549516)
+        ;
+
+        
+    
+    
+            var marker_56ec9a26155dddcf07bbd4efe870c5b6 = L.marker(
+                [51.7592, 19.4578],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_a8b60569566404d28b867ab4e71d1bd1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_56ec9a26155dddcf07bbd4efe870c5b6.setIcon(icon_a8b60569566404d28b867ab4e71d1bd1);
+        
+    
+        var popup_ce6d425b7e338b05d47fee9ffcc22e28 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_acec5b4c60bdc3738d690ddfee6caeb3 = $(`<div id="html_acec5b4c60bdc3738d690ddfee6caeb3" style="width: 100.0%; height: 100.0%;">Przystanek metra: Centrum (ul. Piotrkowska)</div>`)[0];
+            popup_ce6d425b7e338b05d47fee9ffcc22e28.setContent(html_acec5b4c60bdc3738d690ddfee6caeb3);
+        
+
+        marker_56ec9a26155dddcf07bbd4efe870c5b6.bindPopup(popup_ce6d425b7e338b05d47fee9ffcc22e28)
+        ;
+
+        
+    
+    
+            var marker_da5311f62666149bec8bde8d1409d982 = L.marker(
+                [51.7599, 19.4663],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_07dad23a66660aeda67e65467f62de13 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_da5311f62666149bec8bde8d1409d982.setIcon(icon_07dad23a66660aeda67e65467f62de13);
+        
+    
+        var popup_decbcdaa387a78990530f7dbad07404e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_45c4fa7415afdc32a25ef720481e3baa = $(`<div id="html_45c4fa7415afdc32a25ef720481e3baa" style="width: 100.0%; height: 100.0%;">Przystanek metra: Łódź Fabryczna</div>`)[0];
+            popup_decbcdaa387a78990530f7dbad07404e.setContent(html_45c4fa7415afdc32a25ef720481e3baa);
+        
+
+        marker_da5311f62666149bec8bde8d1409d982.bindPopup(popup_decbcdaa387a78990530f7dbad07404e)
+        ;
+
+        
+    
+    
+            var marker_632a7d3cd3640da3c3e89637da799a17 = L.marker(
+                [51.7767, 19.446],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_d2eac3f31c5a19e711c595ad7d08cc76 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_632a7d3cd3640da3c3e89637da799a17.setIcon(icon_d2eac3f31c5a19e711c595ad7d08cc76);
+        
+    
+        var popup_ddb93b2866ecc3ef474182ac24081a22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_db87494d18238e34bfaed353452d99ec = $(`<div id="html_db87494d18238e34bfaed353452d99ec" style="width: 100.0%; height: 100.0%;">Przystanek metra: Manufaktura</div>`)[0];
+            popup_ddb93b2866ecc3ef474182ac24081a22.setContent(html_db87494d18238e34bfaed353452d99ec);
+        
+
+        marker_632a7d3cd3640da3c3e89637da799a17.bindPopup(popup_ddb93b2866ecc3ef474182ac24081a22)
+        ;
+
+        
+    
+    
+            var marker_b9a44c20417808558a83d61f0bb18b04 = L.marker(
+                [51.7596, 19.4266],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_5ef6338336e21c7f9841d67c7fefca98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_b9a44c20417808558a83d61f0bb18b04.setIcon(icon_5ef6338336e21c7f9841d67c7fefca98);
+        
+    
+        var popup_2875642a97623f3424e668fe8857ea17 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_494c156dcf17e9ef51b1eb5d5bd29f7b = $(`<div id="html_494c156dcf17e9ef51b1eb5d5bd29f7b" style="width: 100.0%; height: 100.0%;">Przystanek metra: Łódź Kaliska</div>`)[0];
+            popup_2875642a97623f3424e668fe8857ea17.setContent(html_494c156dcf17e9ef51b1eb5d5bd29f7b);
+        
+
+        marker_b9a44c20417808558a83d61f0bb18b04.bindPopup(popup_2875642a97623f3424e668fe8857ea17)
+        ;
+
+        
+    
+    
+            var marker_1df7056d2afaa423c4711a9da4135357 = L.marker(
+                [51.7465, 19.3927],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_ee1c1d370339bbd216983c8115f42442 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_1df7056d2afaa423c4711a9da4135357.setIcon(icon_ee1c1d370339bbd216983c8115f42442);
+        
+    
+        var popup_bb3980b5ce774319babb5a4118ba69cb = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5ac6f419a6f066e6d3181bf7f6b882f8 = $(`<div id="html_5ac6f419a6f066e6d3181bf7f6b882f8" style="width: 100.0%; height: 100.0%;">Przystanek metra: Retkinia</div>`)[0];
+            popup_bb3980b5ce774319babb5a4118ba69cb.setContent(html_5ac6f419a6f066e6d3181bf7f6b882f8);
+        
+
+        marker_1df7056d2afaa423c4711a9da4135357.bindPopup(popup_bb3980b5ce774319babb5a4118ba69cb)
+        ;
+
+        
+    
+    
+            var marker_7eb61a9659ac05cd130ad2c18ccc2fac = L.marker(
+                [51.8143, 19.4581],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_921c8fd8763d3862bf58db24d08511fc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7eb61a9659ac05cd130ad2c18ccc2fac.setIcon(icon_921c8fd8763d3862bf58db24d08511fc);
+        
+    
+        var popup_5b91aa02f7a66115393d23fc54d109a6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0f24337c4acfe55a3f204fef884caba9 = $(`<div id="html_0f24337c4acfe55a3f204fef884caba9" style="width: 100.0%; height: 100.0%;">Przystanek metra: Radogoszcz</div>`)[0];
+            popup_5b91aa02f7a66115393d23fc54d109a6.setContent(html_0f24337c4acfe55a3f204fef884caba9);
+        
+
+        marker_7eb61a9659ac05cd130ad2c18ccc2fac.bindPopup(popup_5b91aa02f7a66115393d23fc54d109a6)
+        ;
+
+        
+    
+    
+            var marker_55347b31115a04ad6fb8db485ab5c6b5 = L.marker(
+                [51.7981, 19.406],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_33d86d9e8a1428367a00fd24fe7e078d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_55347b31115a04ad6fb8db485ab5c6b5.setIcon(icon_33d86d9e8a1428367a00fd24fe7e078d);
+        
+    
+        var popup_b028061ec8761f079ebc3234b54241f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_093d5bbd248e39666b2c9d31baa500cd = $(`<div id="html_093d5bbd248e39666b2c9d31baa500cd" style="width: 100.0%; height: 100.0%;">Przystanek metra: Teofilów</div>`)[0];
+            popup_b028061ec8761f079ebc3234b54241f6.setContent(html_093d5bbd248e39666b2c9d31baa500cd);
+        
+
+        marker_55347b31115a04ad6fb8db485ab5c6b5.bindPopup(popup_b028061ec8761f079ebc3234b54241f6)
+        ;
+
+        
+    
+    
+            var marker_74484f29af454a888d054e91b7ee88d5 = L.marker(
+                [51.7898, 19.4592],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_fc0dde735c1c4ba2e87003235c92ea30 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_74484f29af454a888d054e91b7ee88d5.setIcon(icon_fc0dde735c1c4ba2e87003235c92ea30);
+        
+    
+        var popup_89f4f567d75f9b8defe576e404bfe002 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7d7e3ac1ecda528725e0d4ac1a19d6dc = $(`<div id="html_7d7e3ac1ecda528725e0d4ac1a19d6dc" style="width: 100.0%; height: 100.0%;">Przystanek metra: Bałuty</div>`)[0];
+            popup_89f4f567d75f9b8defe576e404bfe002.setContent(html_7d7e3ac1ecda528725e0d4ac1a19d6dc);
+        
+
+        marker_74484f29af454a888d054e91b7ee88d5.bindPopup(popup_89f4f567d75f9b8defe576e404bfe002)
+        ;
+
+        
+    
+    
+            var marker_a949aec44b7316e36b210fd02f6efd5d = L.marker(
+                [51.746, 19.457],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_bfb5e223cecda416258e3808217804c1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_a949aec44b7316e36b210fd02f6efd5d.setIcon(icon_bfb5e223cecda416258e3808217804c1);
+        
+    
+        var popup_3f76f5f4aa91dbb5a1c8e760a2d08a01 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2b632fcdd91f7946f5d512656fa2d996 = $(`<div id="html_2b632fcdd91f7946f5d512656fa2d996" style="width: 100.0%; height: 100.0%;">Przystanek metra: Politechnika Łódzka</div>`)[0];
+            popup_3f76f5f4aa91dbb5a1c8e760a2d08a01.setContent(html_2b632fcdd91f7946f5d512656fa2d996);
+        
+
+        marker_a949aec44b7316e36b210fd02f6efd5d.bindPopup(popup_3f76f5f4aa91dbb5a1c8e760a2d08a01)
+        ;
+
+        
+    
+    
+            var marker_f4f4601fe4506ba6f77aba973cdcf674 = L.marker(
+                [51.7123, 19.4242],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_d5f9991c9974c87c3aebeb84b6b7ff38 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f4f4601fe4506ba6f77aba973cdcf674.setIcon(icon_d5f9991c9974c87c3aebeb84b6b7ff38);
+        
+    
+        var popup_defa332a96a1752bd82eb5520c1bd8e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6bc7db705be94bd8c1880322b445af84 = $(`<div id="html_6bc7db705be94bd8c1880322b445af84" style="width: 100.0%; height: 100.0%;">Przystanek metra: Ruda Pabianicka</div>`)[0];
+            popup_defa332a96a1752bd82eb5520c1bd8e4.setContent(html_6bc7db705be94bd8c1880322b445af84);
+        
+
+        marker_f4f4601fe4506ba6f77aba973cdcf674.bindPopup(popup_defa332a96a1752bd82eb5520c1bd8e4)
+        ;
+
+        
+    
+    
+            var marker_c53bd9916332d1e7878101d2404ffff2 = L.marker(
+                [51.746, 19.395],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_533454f33be6c2eb7cd9d92704d15c1e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c53bd9916332d1e7878101d2404ffff2.setIcon(icon_533454f33be6c2eb7cd9d92704d15c1e);
+        
+    
+        var popup_b43ff7b9042a1fea5c63e4e4ffbc26e4 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8bbc927198b74d608be11620e0e84b20 = $(`<div id="html_8bbc927198b74d608be11620e0e84b20" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 1 - Retkinia</div>`)[0];
+            popup_b43ff7b9042a1fea5c63e4e4ffbc26e4.setContent(html_8bbc927198b74d608be11620e0e84b20);
+        
+
+        marker_c53bd9916332d1e7878101d2404ffff2.bindPopup(popup_b43ff7b9042a1fea5c63e4e4ffbc26e4)
+        ;
+
+        
+    
+    
+            var marker_391e222fba72bc78fbc1eb32344e8977 = L.marker(
+                [51.7685, 19.535],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_3ce32b4f3cbcb53af766c3c3365e68c0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_391e222fba72bc78fbc1eb32344e8977.setIcon(icon_3ce32b4f3cbcb53af766c3c3365e68c0);
+        
+    
+        var popup_d312c3022b1123b3a57d5875867dc49a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c8f1260f8a14056f60fa8d008ccf0397 = $(`<div id="html_c8f1260f8a14056f60fa8d008ccf0397" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 2 - Widzew</div>`)[0];
+            popup_d312c3022b1123b3a57d5875867dc49a.setContent(html_c8f1260f8a14056f60fa8d008ccf0397);
+        
+
+        marker_391e222fba72bc78fbc1eb32344e8977.bindPopup(popup_d312c3022b1123b3a57d5875867dc49a)
+        ;
+
+        
+    
+    
+            var marker_efd0f22c863ee4b9bd03529b8efa12de = L.marker(
+                [51.7595, 19.46],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_91b7a46428e521db0a837782f30f05f2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_efd0f22c863ee4b9bd03529b8efa12de.setIcon(icon_91b7a46428e521db0a837782f30f05f2);
+        
+    
+        var popup_a461401c1760578d7300cad2ac80dade = L.popup({"maxWidth": "100%"});
+
+        
+            var html_180afd38e13b613c3008550a3ab538e5 = $(`<div id="html_180afd38e13b613c3008550a3ab538e5" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 3 - Centrum</div>`)[0];
+            popup_a461401c1760578d7300cad2ac80dade.setContent(html_180afd38e13b613c3008550a3ab538e5);
+        
+
+        marker_efd0f22c863ee4b9bd03529b8efa12de.bindPopup(popup_a461401c1760578d7300cad2ac80dade)
+        ;
+
+        
+    
+    
+            var marker_6c5eac2cecc0b08f24085ceda9c03e88 = L.marker(
+                [51.777, 19.448],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_0161580308c54f09f33141c860d06cd9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6c5eac2cecc0b08f24085ceda9c03e88.setIcon(icon_0161580308c54f09f33141c860d06cd9);
+        
+    
+        var popup_24c58be0a2b45b4f731a8a096ce9c31e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_331eb189086dac9ce6574550e89f7264 = $(`<div id="html_331eb189086dac9ce6574550e89f7264" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 4 - Manufaktura</div>`)[0];
+            popup_24c58be0a2b45b4f731a8a096ce9c31e.setContent(html_331eb189086dac9ce6574550e89f7264);
+        
+
+        marker_6c5eac2cecc0b08f24085ceda9c03e88.bindPopup(popup_24c58be0a2b45b4f731a8a096ce9c31e)
+        ;
+
+        
+    
+    
+            var marker_941c5e3495000b9481ff42800d00db7d = L.marker(
+                [51.7462, 19.459],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_dedefc36a723d6d12ed293bcbfc12f79 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_941c5e3495000b9481ff42800d00db7d.setIcon(icon_dedefc36a723d6d12ed293bcbfc12f79);
+        
+    
+        var popup_f4b98cc9663a9af39cdcf167f1cba78c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1c4c98ead83b3c2b5e249a279a404a30 = $(`<div id="html_1c4c98ead83b3c2b5e249a279a404a30" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 5 - Politechnika</div>`)[0];
+            popup_f4b98cc9663a9af39cdcf167f1cba78c.setContent(html_1c4c98ead83b3c2b5e249a279a404a30);
+        
+
+        marker_941c5e3495000b9481ff42800d00db7d.bindPopup(popup_f4b98cc9663a9af39cdcf167f1cba78c)
+        ;
+
+        
+    
+    
+            var marker_3b7d33de426663464a9705fa188f08d2 = L.marker(
+                [51.815, 19.461],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_21848937148596313b4fd53f7e42bd36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3b7d33de426663464a9705fa188f08d2.setIcon(icon_21848937148596313b4fd53f7e42bd36);
+        
+    
+        var popup_e3caf10b49432d66a10af09fee4bc0f7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e45ff7def1baca3df8111485785dd5a5 = $(`<div id="html_e45ff7def1baca3df8111485785dd5a5" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 6 - Radogoszcz</div>`)[0];
+            popup_e3caf10b49432d66a10af09fee4bc0f7.setContent(html_e45ff7def1baca3df8111485785dd5a5);
+        
+
+        marker_3b7d33de426663464a9705fa188f08d2.bindPopup(popup_e3caf10b49432d66a10af09fee4bc0f7)
+        ;
+
+        
+    
+    
+            var marker_467ff15a486d22b0fed83d778190be6c = L.marker(
+                [51.7985, 19.41],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_77e450764442570df46cf1ac88ea6fc4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_467ff15a486d22b0fed83d778190be6c.setIcon(icon_77e450764442570df46cf1ac88ea6fc4);
+        
+    
+        var popup_aa42a70e236655b259dad5bd7aefbd33 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_305d1dec00e045d262cf51697f706276 = $(`<div id="html_305d1dec00e045d262cf51697f706276" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 7 - Teofilów</div>`)[0];
+            popup_aa42a70e236655b259dad5bd7aefbd33.setContent(html_305d1dec00e045d262cf51697f706276);
+        
+
+        marker_467ff15a486d22b0fed83d778190be6c.bindPopup(popup_aa42a70e236655b259dad5bd7aefbd33)
+        ;
+
+        
+    
+    
+            var marker_6f99fd59c2d94def1c8953cb3d6ad405 = L.marker(
+                [51.759, 19.525],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_446fba26c9153f7fcbb42ba265a484ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_6f99fd59c2d94def1c8953cb3d6ad405.setIcon(icon_446fba26c9153f7fcbb42ba265a484ce);
+        
+    
+        var popup_255d4d64083ca57a077ad393ed0b46ea = L.popup({"maxWidth": "100%"});
+
+        
+            var html_127cced37d1da4adcf8a7ad69847c8ff = $(`<div id="html_127cced37d1da4adcf8a7ad69847c8ff" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 8 - Janów</div>`)[0];
+            popup_255d4d64083ca57a077ad393ed0b46ea.setContent(html_127cced37d1da4adcf8a7ad69847c8ff);
+        
+
+        marker_6f99fd59c2d94def1c8953cb3d6ad405.bindPopup(popup_255d4d64083ca57a077ad393ed0b46ea)
+        ;
+
+        
+    
+    
+            var marker_1f15fbf404544f23835793fb6f8ffb74 = L.marker(
+                [51.7598, 19.47],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_5de94cb2044188e7c27e409e8f029689 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1f15fbf404544f23835793fb6f8ffb74.setIcon(icon_5de94cb2044188e7c27e409e8f029689);
+        
+    
+        var popup_387c26353c5c09a0b6f7681d2334355d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b09c196a892ba803a213779e95948052 = $(`<div id="html_b09c196a892ba803a213779e95948052" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 9 - Łódź Fabryczna</div>`)[0];
+            popup_387c26353c5c09a0b6f7681d2334355d.setContent(html_b09c196a892ba803a213779e95948052);
+        
+
+        marker_1f15fbf404544f23835793fb6f8ffb74.bindPopup(popup_387c26353c5c09a0b6f7681d2334355d)
+        ;
+
+        
+    
+    
+            var marker_1cb2e1027c4feed839dfb8ab47f64447 = L.marker(
+                [51.7595, 19.43],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_78fe712d460bb1a6ee28b304e7d6c124 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1cb2e1027c4feed839dfb8ab47f64447.setIcon(icon_78fe712d460bb1a6ee28b304e7d6c124);
+        
+    
+        var popup_40de4cdb1e91b7d2a526693d10934b24 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6e02864e7f453b26172bc51b15f7235b = $(`<div id="html_6e02864e7f453b26172bc51b15f7235b" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 10 - Łódź Kaliska</div>`)[0];
+            popup_40de4cdb1e91b7d2a526693d10934b24.setContent(html_6e02864e7f453b26172bc51b15f7235b);
+        
+
+        marker_1cb2e1027c4feed839dfb8ab47f64447.bindPopup(popup_40de4cdb1e91b7d2a526693d10934b24)
+        ;
+
+        
+    
+    
+            var marker_c3e6b4d0436416576c728771c7759017 = L.marker(
+                [51.79, 19.462],
+                {}
+            ).addTo(map_819a3024b5ab0868e5cabbefb63bef86);
+        
+    
+            var icon_f0648d1b35ff8fb0098ef61695d415af = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c3e6b4d0436416576c728771c7759017.setIcon(icon_f0648d1b35ff8fb0098ef61695d415af);
+        
+    
+        var popup_a3c1616fe9c716fb41847516431c5886 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_d8149200c9c00cc2997ed86fa614c5c5 = $(`<div id="html_d8149200c9c00cc2997ed86fa614c5c5" style="width: 100.0%; height: 100.0%;">Stacja rowerowa: Bike Station 11 - Bałuty</div>`)[0];
+            popup_a3c1616fe9c716fb41847516431c5886.setContent(html_d8149200c9c00cc2997ed86fa614c5c5);
+        
+
+        marker_c3e6b4d0436416576c728771c7759017.bindPopup(popup_a3c1616fe9c716fb41847516431c5886)
+        ;
+
+        
+    
+</script>
+</html>
